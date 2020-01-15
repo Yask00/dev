@@ -7,7 +7,7 @@ a docker(container technology) works like a virtual mashine
 docker image ls - lists all docker images
 example - download image with app, fire it up as a new container, start it stop it 
 
-CONTAINERS ARE LIKE FAST LIGHWEIGHT VIRTUAL MASHINES AND DOCKER NAKES RUNNING OUT APPS INSIDE CONTAINERS EASY
+CONTAINERS ARE LIKE FAST LIGHWEIGHT VIRTUAL MASHINES AND DOCKER MAKES RUNNING OUT APPS INSIDE CONTAINERS EASY
 
 code > docker image > push to registry > start container from it
 
