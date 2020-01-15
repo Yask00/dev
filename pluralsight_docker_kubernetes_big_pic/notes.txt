@@ -1,0 +1,18 @@
+----------------------------DOCKER-----------------------------------
+
+a docker(container technology) works like a virtual mashine
+    vm needs separate VM ect
+    all docker images run on same server
+
+docker image ls - lists all docker images
+example - download image with app, fire it up as a new container, start it stop it 
+
+CONTAINERS ARE LIKE FAST LIGHWEIGHT VIRTUAL MASHINES AND DOCKER NAKES RUNNING OUT APPS INSIDE CONTAINERS EASY
+
+code > docker image > push to registry > start container from it
+
+----------------------------KUBERNETES-----------------------------------
+Docker provides mechanism of startin//stoping containers, but thats pretty low level
+Kubernetes work on higher level - how many container to run in, which nodes to run them on, how to update them
+
+ISSUING COMMANDS TO DOCKER INSTANCES
