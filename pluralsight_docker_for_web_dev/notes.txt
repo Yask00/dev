@@ -1,0 +1,34 @@
+An app can have multiple containers for 
+    front end
+    database
+    nodejs
+    backend
+
+How do you get you source code into a container
+    put it in an image
+    put it in container layer r/w - using volumes
+
+Docker volumes
+    dir in container = data volume
+
+Creating data volume
+    docker inspect mycontainer
+    docker run -p 8080:3000 -v $(pwd):/var/www node
+
+src_to_container--------------------------------
+    create empty express project
+    docker pull node
+    docker run -p 8080:3000 -v /var/wwww node
+        we should have volume under the cover
+    docker inspect <id>
+        we can check Mounts property
+    docker rm -v 733b947a4776
+        remove container and volume
+    we should link the project folder into container
+    docker run -p 8080:3000 -v $(pwd):/var/www -w "/var/www" node npm start
+        let run on 8080 on the external with 3000 on the internal with set up volume
+        that point to src in current directory and the volume thats inside in the container
+        gonna point to the express site folder is var/www and use that volume as working directory 
+        that way npm start is forward from var/www to src from express site
+
+        open http://192.168.0.146:8080/ and the same site is live
