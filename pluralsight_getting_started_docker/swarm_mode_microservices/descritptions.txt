@@ -1,0 +1,33 @@
+SWARM MODE THEORY
+ 
+A cluster = A swarm
+    a collection of docker engines joined into a cluster
+    engines in a swarm run in swarm mode
+
+A swarm consist 
+    1+ manager nodes (3-5 recommended, only 1 is the leader)
+        look after state of cluster dispatch tasks
+    1+ worker nodes 
+        accept and execute tasks
+    Services
+        declarative way of running and scaling tasks
+        fe service and backend service
+        let say we want 5 instances of the container running the fe
+
+IANA
+    Engine port: 2375
+    Secure Engine port: 2376
+    Swarm Port: 2377 (WIP)
+
+COMMANDS
+Initialize swarm and a node as manager
+    docker swarm init --advertise-addr 172.17.0.1:2377 --listen-addr 172.17.0.1:2377
+Add a manager/worker
+    docker swarm join-token manager - give us a command
+        docker swarm join \
+        --token SWMTKN-1-64k044f5a1hlcm8nm9nwj3pyj748fqxtdn0tftvj69z8gbkxge-3aql9a0bfuwl73rduxms33mrp 172.17.0.1:2377 \ 
+        --advertise-addr 172.17.0.2:2377 \ 
+        --listen-addr 172.17.0.2:2377
+
+    docker swarm join-token worker - give us a command
+
