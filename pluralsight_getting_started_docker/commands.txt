@@ -1,0 +1,29 @@
+docker run <image>
+    to run new container
+docker ps -a
+    to see running and stopped containers
+docker images
+    to see info about images
+
+docker pull
+    pulls an image from the hub
+docker start <container>
+docker stop <container>
+docker stop $(docker ps -aq)
+    stop all containers
+
+docker rmi <image-name>
+    remove image from ours
+docker rm $(docker ps -aq)
+
+docker rmi $(docker images -q)
+
+docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-cli
+    -d tell the deamon to start container in background
+    --name web giving it a name
+    -p 80:8080 map port 80 on docker host to 8080 inside the containers
+
+docker run -it --name temp ubuntu:latest /bin/bash
+    -it to interact in terminal with it
+
+TOP LEVEL IMAGES ARE OFFICIAL on hub.docker
