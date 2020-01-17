@@ -1,0 +1,22 @@
+OPTIONS
+    Use legacy linking
+        1. Run a container with name
+        2 Link to running Container by name
+        3 Repeat for aditional
+        docker run -d --name my-postgres postgres
+        docker run -d -p 5000:5000 --link my-postgres:postgres <name>/aspnetcore
+    Add containers to a bridge network
+
+NODE.JS AND MONGODB--------------------------legacy linking
+    docker build -f node.dockerfile -t danwahlin/node .
+        (custom node, node and mongo images available)
+    docker run -d --name my-mongodb mongo
+    docker run -d -p 3000:3000 --link my-mongodb:mongodb danwahlin/node
+    docker exec d6 node deSeeder.js (insert data in mongodb database)
+        execute a command in running container
+
+BRIDGE NETWORK--------------------------
+    Create isolated docker host where different containers can communicate
+    docker network ls
+    docker network create --driver bridge isolated_network
+    docker run -d --net=isolated_network --name mongodb mongo

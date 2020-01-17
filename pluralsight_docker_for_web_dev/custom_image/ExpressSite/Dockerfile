@@ -10,6 +10,7 @@ COPY . /var/www
 
 WORKDIR /var/www
 
+RUN ls -la
 RUN npm install
 
 # VOLUME ["/var/www"]

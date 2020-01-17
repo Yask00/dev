@@ -48,6 +48,8 @@ ENTRYPOINT
 WORKDIR/EXPOSE/ENV/VOLUME
 
 
+docker-machine env default 
+
 docker build -t <username>/node .
 docker run -d -p 8080:3000 yask00/node
 
