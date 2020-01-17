@@ -32,3 +32,26 @@ src_to_container--------------------------------
         that way npm start is forward from var/www to src from express site
 
         open http://192.168.0.146:8080/ and the same site is live
+
+
+KEY INSTRUCTIONS FOR CREATING IMAGE--------------------------------
+
+FROM
+    i want start creating image on top of another image
+MAINTAINER
+RUN
+    like typing npm install or something else
+COPY
+    copy the src code into the container
+ENTRYPOINT
+    main entry point for this container
+WORKDIR/EXPOSE/ENV/VOLUME
+
+
+docker build -t <username>/node .
+docker run -d -p 8080:3000 yask00/node
+
+
+PUBLISH------------------------------------
+login in terminal and then 
+docker push yask00/node

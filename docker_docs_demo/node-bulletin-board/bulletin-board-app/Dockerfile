@@ -9,7 +9,7 @@ COPY package.json .
 # COPY the file package.json from your host to the present location (.) in your image (so in this case, to /usr/src/app/package.json)
 RUN npm install
 COPY . .
-#COPY in the rest of your app’s source code from your host to your image filesystem.
+#COPY in the rest of your app’s source code from your host to your image filesystem. FROM > TO
 
 CMD [ "npm", "start" ]
 
