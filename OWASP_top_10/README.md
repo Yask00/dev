@@ -1,8 +1,12 @@
 # OWASP – Open Web Application Security Project
 
-[Prevent XSS](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+[OWASP XSS Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 
-[Test hacking](https://google-gruyere.appspot.com/)
+[XSS Quizes and games](https://www.acunetix.com/blog/web-security-zone/test-xss-skills-vulnerable-sites/)
+
+[Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+
+[https://google-gruyere.appspot.com/](https://google-gruyere.appspot.com/)
 
 ### Injection:
 - Untrusted data send to server as part of command or query
@@ -18,7 +22,7 @@
 ### Cross Site Scripting XSS:
 - Untrusted user input is interpreted by browser and executed
 - Hijack user session, deface web sites, change content
-- Escape untrusted data input, latest UI frameworks
+- Escape untrusted data input, latest UI frameworks, Encode data on output.Use appropriate response headers.Content Security Policy. 
 
 
 ### Broken Access Control:

@@ -11,4 +11,4 @@ Linux, Git, Web, Dockers, VM snippets, helpers ect.
 
 ## Visual Studio Code commands
 
-[HERE](vs_code_commands.md)
+[HERE](VSCODE SHORTCUTS/vs_code_commands.md)
